@@ -24,6 +24,10 @@ h6,
 }
 
 
+section {
+    height:100vh;
+    width: 100vw;
+}
 
 /*** Button ***/
 .btn {
@@ -75,8 +79,15 @@ h6,
 }
 
 /*** Navbar ***/
+
+
+  
 .navbar {
-/* background-image: linear-gradient(rgba(247, 194, 102, 0.85), rgba(220, 220, 220, 0.85)); */
+    position: relative;
+    width:100%;
+    top: 0;
+    left: 0;
+    
 }
 
 .navbar-inner {
@@ -101,10 +112,6 @@ h6,
     filter: drop-shadow(0.25rem 0.25rem 0.5rem #80cbed);
 }
 
-.navbar.sticky-top {
-    top: -100px;
-    transition: .5s;
-}
 
 .navbar .navbar-brand {
     height: 75px;
@@ -173,10 +180,31 @@ h6,
     color: var(--secondary);
 }
 
+html { 
+    background: url(images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
 body, html {
     height: 100%;
     margin: 0;
   }
+
+
+ /* .bg {
+    background-image: linear-gradient(rgba(255,255,255,0.85), rgba(0, 0, 0, 0.85)), url("/img/splash-logo-bg.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */
+
+.landing{
+position: relative;
+}
 
 .bg{
 background-size: cover;
@@ -288,31 +316,41 @@ box-shadow: -10px 0px black;
 
 /* Style for the footer */
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     background-color: #4d4b4b; /* Change to your desired background color */
     color: #fff; /* Change to your desired text color */
-    padding: 10px 0; /* Adjust the padding as needed */
 }
 
 /* Style for the logo */
 footer img {
     max-width: 200px; /* Adjust the maximum width for your logo */
-    display: block; 
-    text-align: right;
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Style for the social media icons */
 footer ul.list-inline {
-    text-align: right; /* Align the icons to the right */
-    margin-top: 0px; /* Adjust the top margin as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
 }
 
 footer ul.list-inline li.list-inline-item {
     display: inline-block;
-    margin-left: 15px; /* Adjust the spacing between icons as needed */
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Style for Font Awesome icons (assuming the default Font Awesome styles) */
 footer ul.list-inline li.list-inline-item a {
+    align-items: center;
+    justify-content: center;
     color: #fff; /* Change to your desired icon color */
     font-size: 24px; /* Adjust the icon size as needed */
     text-decoration: none;
@@ -323,34 +361,12 @@ footer ul.list-inline li.list-inline-item a:hover {
     color: #007bff; /* Change to your desired hover color */
 }
 
-/*** TEST SLIDESHOW ***/
-@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
-
-* {
-  box-sizing: border-box;
-}
-
-#body-feat {
-  font-family: "Muli", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-}
-
-.container-feat {
-  display: flex;
-  width: 100vw;
-  justify-content: space-around;
-}
-
+/* Main Panels */
 .panel {
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 70vh;
   border-radius: 50px;
   cursor: pointer;
   flex: 0.5;
@@ -361,49 +377,32 @@ footer ul.list-inline li.list-inline-item a:hover {
 }
 
 .panel p {
-display: none;
-  }
-
-.panel.active p {
-    display: block;
+    display: inline-block;
     color:#000000;
     font-size: 36px;
   }
 
-.panel.active.p1{
+.panel:hover.p1{
     opacity: 1;
     filter: drop-shadow(0.25rem 0.25rem 0.5rem #00ff37);
   }
 
-.panel.active.p2 {
+.panel:hover.p2 {
     opacity: 1;
     filter: drop-shadow(0.25rem 0.25rem 0.5rem #1500ff);
   }
-.panel.active.p3 {
+.panel:hover.p3 {
     opacity: 1;
     filter: drop-shadow(0.25rem 0.25rem 0.5rem #ff0000);
   }
-.panel.active.p4 {
+.panel:hover.p4 {
     opacity: 1;
     filter: drop-shadow(0.25rem 0.25rem 0.5rem #ff008c);
   }
-.panel.active.p5 {
+.panel:hover.p5 {
     opacity: 1;
     filter: drop-shadow(0.25rem 0.25rem 0.5rem #e4d212);
   }
 
-.panel.active h3 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
-}
 
-@media (max-width: 480px) {
-  .container {
-    width: 100vw;
-  }
 
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
-  }
-}
