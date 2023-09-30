@@ -124,3 +124,13 @@ const removeActiveClasses = () => {
     panel.classList.remove("active");
   });
 };
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
+        navbar.style.opacity = "0";
+    } else {
+        navbar.style.opacity = "1";
+    }
+});
