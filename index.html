@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700&display=swap" rel="stylesheet">  
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -27,6 +27,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
@@ -34,16 +35,12 @@
 </head>
 
 <body>
-    <div class="bg"><!-- Background Div -->
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" role="status"></div>
-    </div>
-    <!-- Spinner End -->
 
+  <!-- Background Div -->
+    <div class="bg">
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg  navbar-light sticky-top pt-3 p-0 px-4 px-lg-5">
+  <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg  navbar-light sticky-top pt-3 p-0 px-4 px-lg-5" id="myNavbar">
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,22 +49,22 @@
         <a href="index.html" class="navbar-brand d-flex align-items-center">
         <img class="img-fluid" src="img/ape-juice.png" alt="" width="300px">
         </a>
-        <a href="index.html" class="navbar-brand d-flex align-items-center" id="home">
-        <img class="img-fluid navbar_button" src="img/home_button_text_lg.png" alt="">
+        <a href="index.html" class="d-flex align-items-center active" id="home">
+        <img class="img-fluid navbar_button active" src="img/home_button_text_lg.png" alt="">
         </a>
-        <a href="about.html" class="navbar-brand d-flex align-items-center">
+        <a href="about.html" class="d-flex align-items-center" id="about">
         <img class="img-fluid navbar_button" src="img/about_button.png" alt="">
         </a>
-        <a href="socials.html" class="navbar-brand d-flex align-items-center">
+        <a href="socials.html" class=" d-flex align-items-center" id="socials">
         <img class="img-fluid navbar_button" src="img/socials_button.png" alt="">
         </a>
-        <a href="roadmap.html" class="navbar-brand d-flex align-items-center">
+        <a href="roadmap.html" class=" d-flex align-items-center" id="roadmap">
         <img class="img-fluid navbar_button" src="img/roadmap_button.png" alt="">
         </a>
-        <a href="story.html" class="navbar-brand d-flex align-items-center">
+        <a href="story.html" class=" d-flex align-items-center" id="story">
         <img class="img-fluid navbar_button" src="img/story_button.png" alt="">
         </a>
-        <a href="faq.html" class="navbar-brand d-flex align-items-center">
+        <a href="faq.html" class="d-flex align-items-center" id="faq">
         <img class="img-fluid navbar_button" src="img/faq_button.png" alt="">
         </a>
             </div>
@@ -80,63 +77,71 @@
 
     <div class="container-feat">
         <div
-          class="panel active p1"
+          class="panel active p1 text-center"
           style="background-image: url('/img/3D_can_BT_1.png');">
           <p class="PiratesBay">Davy Jones</p>
         </div>
         <div
-          class="panel p2"
+          class="panel p2 text-center"
           style="background-image: url('/img/blue_3d_low.png');">
           <p class="PiratesBay">Eyeball Paul</p>
         </div>
         <div
-          class="panel p3"
+          class="panel p3 text-center"
           style="background-image: url('/img/3D_can_BT_1.png');">
           <p class="PiratesBay">Charlie Seadog</p>
         </div>
         <div
-          class="panel p4"
+          class="panel p4 text-center"
           style="background-image: url('/img/3D_can_BT_1.png');">
           <p class="PiratesBay">Barnacle Bill</p>
         </div>
         <div
-          class="panel p5"
+          class="panel p5 text-center"
           style="background-image: url('/img/3D_can_BT_1.png');">
           <p class="PiratesBay">Davy Jones</p>
         </div>
       </div>
 
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-light footer ">
-        <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start  mb-md-0">
-                        &copy; <a href="#">Ape Juice</a>, All Right Reserved.
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="d-flex justify-content-end">
-                            <a class="btn btn-square rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square rounded-circle me-1" href=""><i class="fab fa-discord"></i></a>
-                            <a class="btn btn-square rounded-circle me-1" href=""><i class="fab fa-telegram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
+    <!-- Footer Start -->
+    <footer class="text-light py-3">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 text-left">
+                  <img src="img/ape-juice.png" alt="Logo" class="img-fluid" style="max-width: 200px;">
+              </div>
+              <div class="col-md-6 text-right">
+                  <ul class="list-inline">
+                      <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                      <li class="list-inline-item"><a href="#"><i class="fab fa-discord"></i></a></li>
+                      <li class="list-inline-item"><a href="#"><i class="fab fa-telegram"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
+
     <!-- Footer End -->
 
     <!-- JavaScript Libraries -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
+    <script src="js/common-scripts.js"></script>
+    
+    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

@@ -24,20 +24,6 @@ h6,
 }
 
 
-/*** Spinner ***/
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
-}
-
-#spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
-}
-
 
 /*** Button ***/
 .btn {
@@ -90,9 +76,11 @@ h6,
 
 /*** Navbar ***/
 .navbar {
-/* background-image: url("/img/sand.jpg"); */
+/* background-image: linear-gradient(rgba(247, 194, 102, 0.85), rgba(220, 220, 220, 0.85)); */
+}
 
-background-image: linear-gradient(rgba(247, 194, 102, 0.85), rgba(230, 230, 230, 0.85));
+.navbar-inner {
+    background:transparent;
 }
 
 .navbar_button {
@@ -109,8 +97,8 @@ background-image: linear-gradient(rgba(247, 194, 102, 0.85), rgba(230, 230, 230,
     filter: drop-shadow(0.25rem 0.25rem 0.5rem #f3c00a);
 }
 
-#home:active{
-    background-image: url("/img/story_button.png");
+.active{
+    filter: drop-shadow(0.25rem 0.25rem 0.5rem #80cbed);
 }
 
 .navbar.sticky-top {
@@ -250,108 +238,24 @@ box-shadow: -10px 0px black;
 }
 
 /*** About ***/
+.about_heading{
+    text-shadow: 1px 1px 2px orange;
+}
+
 .about-p{
     text-align: center;
     font-size: 30px;
-    color: orange
+    color: orange;
+    text-shadow: 1px 1px 2px black;
 }
 
 .text-about{
-    font-size: larger;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 /*** Roadmap ***/
-.roadmap-carousel {
-    position: relative;
-}
 
-.roadmap-carousel::before {
-    position: absolute;
-    content: "";
-    height: 0;
-    width: 100%;
-    top: 20px;
-    left: 0;
-    border-top: 2px dashed var(--secondary);
-}
-
-.roadmap-carousel .roadmap-item .roadmap-point {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 6px;
-    left: 50%;
-    margin-left: -15px;
-    background: #FFFFFF;
-    border: 2px solid var(--primary);
-    transform: rotate(45deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.roadmap-carousel .roadmap-item .roadmap-point span {
-    display: block;
-    width: 18px;
-    height: 18px;
-    background: var(--primary);
-}
-
-.roadmap-carousel .roadmap-item {
-    position: relative;
-    padding-top: 150px;
-    text-align: center;
-}
-
-.roadmap-carousel .roadmap-item::before {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 115px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-right: 2px dashed var(--secondary);
-}
-
-.roadmap-carousel .roadmap-item::after {
-    position: absolute;
-    content: "";
-    width: 14px;
-    height: 14px;
-    top: 111px;
-    left: 50%;
-    margin-left: -7px;
-    transform: rotate(45deg);
-    background: var(--primary);
-}
-
-.roadmap-carousel .owl-nav {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-}
-
-.roadmap-carousel .owl-nav .owl-prev,
-.roadmap-carousel .owl-nav .owl-next {
-    margin: 0 12px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    font-size: 22px;
-    color: var(--light);
-    background: var(--primary);
-    transition: .5s;
-}
-
-.roadmap-carousel .owl-nav .owl-prev:hover,
-.roadmap-carousel .owl-nav .owl-next:hover {
-    color: var(--primary);
-    background: var(--dark);
-}
 
 
 /*** FAQs ***/
@@ -381,62 +285,42 @@ box-shadow: -10px 0px black;
 
 
 /*** Footer ***/
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
-    color: var(--secondary);
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
+
+/* Style for the footer */
+footer {
+    background-color: #4d4b4b; /* Change to your desired background color */
+    color: #fff; /* Change to your desired text color */
+    padding: 10px 0; /* Adjust the padding as needed */
 }
 
-.footer {
-    position: fixed;
-    height: 40px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+/* Style for the logo */
+footer img {
+    max-width: 200px; /* Adjust the maximum width for your logo */
+    display: block; 
+    text-align: right;
 }
 
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: var(--secondary);
-    margin-right: 10px;
+/* Style for the social media icons */
+footer ul.list-inline {
+    text-align: right; /* Align the icons to the right */
+    margin-top: 0px; /* Adjust the top margin as needed */
 }
 
-.footer .btn.btn-link:hover {
-    color: var(--primary);
-    letter-spacing: 1px;
-    box-shadow: none;
+footer ul.list-inline li.list-inline-item {
+    display: inline-block;
+    margin-left: 15px; /* Adjust the spacing between icons as needed */
 }
 
-.footer .btn.btn-square {
-    color: var(--primary);
-    border: 1px solid var(--primary);
+/* Style for Font Awesome icons (assuming the default Font Awesome styles) */
+footer ul.list-inline li.list-inline-item a {
+    color: #fff; /* Change to your desired icon color */
+    font-size: 24px; /* Adjust the icon size as needed */
+    text-decoration: none;
 }
 
-.footer .btn.btn-square:hover {
-    color: #FFFFFF;
-    background: var(--primary);
-}
-
-.footer .copyright {
-    padding: 25px 0;
-    border-top: 1px solid rgba(17, 17, 17, .1);
-}
-
-.footer .copyright a {
-    color: var(--primary);
-}
-
-.footer .copyright a:hover {
-    color: var(--dark);
+/* Hover effect for social media icons (optional) */
+footer ul.list-inline li.list-inline-item a:hover {
+    color: #007bff; /* Change to your desired hover color */
 }
 
 /*** TEST SLIDESHOW ***/
