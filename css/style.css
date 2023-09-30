@@ -14,6 +14,13 @@
     z-index: 99;
 }
 
+.main-part {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+}
+
 h4,
 h5,
 h6,
@@ -83,7 +90,7 @@ section {
 
   
 .navbar {
-    position: relative;
+    position: fixed;
     width:100%;
     top: 0;
     left: 0;
